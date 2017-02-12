@@ -2,16 +2,9 @@
 <html>
 
 <head>
+    <base href="/">
     <title>Angular2 sample</title>
     <meta charset="utf-8" />
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    <script src="node_modules/reflect-metadata/reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script>
-        window.autoBootstrap = false;
-    </script>
-    <script src="systemjs.config.js"></script>
-
     <!-- apply resource -->
     <link href="src/resources/themes/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -221,8 +214,7 @@
 
             <!-- page content -->
             <div class="right_col" role="main">
-                content of page
-
+                <default-page></default-page>
             </div>
             <!-- /page content -->
 
@@ -236,6 +228,17 @@
             <!-- /footer content -->
         </div>
     </div>
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script>
+        window.autoBootstrap = false;
+    </script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import("src/main").catch(function (error) { console.log(error); });
+    </script>
 
     <!-- jQuery -->
     <script src="src/resources/themes/gentelella/vendors/jquery/dist/jquery.min.js"></script>
