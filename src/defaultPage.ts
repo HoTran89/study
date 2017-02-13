@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 @Component({
     selector: "default-page",
-    template: "<div><router-outlet></router-outlet></div>"
+    templateUrl: "src/defaultPage.html"
 })
 export class DefaultPage { }
