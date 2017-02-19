@@ -5,13 +5,26 @@
             <th>Name</th>
             <th>Key</th>
             <th>Description</th>
+            <th>photo</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr (click)=onEditCategoryCliked(1)>
+        <tr *ngFor="let category of categories">
             <th scope="row">1</th>
-            <td>category 1</td>
-            <td>key 1</td>
-            <td>@mdo</td>
+            <!--<td blueColor [color]="'red'" [defaultColor]="'blue'">{{category.name}}</td>-->
+            <td [blueColor]="'red'" [defaultColor]="'blue'">{{category.name}}</td>
+            <td>{{category.key}}</td>
+            <td>{{category.description}}</td>
+            <td>
+                <img alt="avatar" style="max-height: 50px; max-width: 50px;" src="/src/resources/themes/gentelella/images/{{category.avatar}}">
+            </td>
+            <td>
+                <a (click)=onEditCategoryCliked(category.id)>Edit</a>
+                <a (click)=onSummaryCategoryCliked(category)>Summary</a>
+            </td>
         </tr>
 </table>
+
+<!--<category-summary [category]=selectedCategory></category-summary>-->
+<category-summary (onCategoryNameChanged)="onCategoryNameChanged($event)" [categoryName]="selectedCategory.name" *ngIf="selectedCategory"></category-summary>
