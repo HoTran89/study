@@ -9,7 +9,7 @@ import { CategoryService } from "./categoryService";
 export class Categories {
     private router: Router;
     public categories: Array<any> = null;
-    public selectedCategory: any = null;
+    public selectedCategory: any ;
     constructor(router: Router, categoryService: CategoryService) {
         this.router = router;
         this.categories = categoryService.getCategories();
@@ -21,9 +21,14 @@ export class Categories {
 
     public onSummaryCategoryCliked(category: any) {
         this.selectedCategory = category;
+        console.log(this.selectedCategory);
     }
 
-    public onCategoryNameChanged(newName: string) {
+    public onSetNewCategoryName(newName: any) {
+        this.selectedCategory.name = newName;
+    }
+
+    public onCategoryNameChanged(newName: any) {
         this.selectedCategory.name = newName;
     }
 }
