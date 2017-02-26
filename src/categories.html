@@ -10,7 +10,8 @@
     <tbody>
         <tr *ngFor="let category of categories">
             <th scope="row">1</th>
-            <td setBackground [color]="'red'" [defaultColor]="'blue'">{{category.name}}</td>
+            <!--<td setBackground [color]="'red'" [defaultColor]="'blue'">{{category.name}}</td>-->
+            <td [setBackground]="'red'" [defaultColor]="'blue'">{{category.name}}</td>
             <td>{{category.key}}</td>
             <td>
                 <a (click)="onEditCategoryClicked(category.id)">Edit</a>
