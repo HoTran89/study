@@ -2,17 +2,22 @@
     <thead>
         <tr>
             <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Name</th>
+            <th>Key</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr (click)="onRowClicked(1)">
+        <tr *ngFor="let category of categories">
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td setBackground [color]="'red'" [defaultColor]="'blue'">{{category.name}}</td>
+            <td>{{category.key}}</td>
+            <td>
+                <a (click)="onEditCategoryClicked(category.id)">Edit</a>
+                <a (click)="onSummaryCategoryClicked(category)">Summary</a>
+            </td>
         </tr>
     </tbody>
 </table>
+<!--<summary-category [category]=selectedCategory></summary-category>-->
+<show-name-category (onChangedCategoryName)="onSetNewCategoryName($event)" [categoryName]="selectedCategory.name" *ngIf="selectedCategory"></show-name-category>

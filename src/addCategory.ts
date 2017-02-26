@@ -7,10 +7,10 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class AddCategory {
     private activatedRoute: ActivatedRoute;
-
     constructor(activedRoute: ActivatedRoute) {
         this.activatedRoute = activedRoute;
         console.log(this.activatedRoute.params["value"].id);
+
     }
 
 }
