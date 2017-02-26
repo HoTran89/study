@@ -1,10 +1,19 @@
+import { Http, Response } from "@angular/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs/observable";
+import "rxjs/add/operator/map";
+
+@Injectable()
 export class CategoryService {
-    public getCategories(): Array<any> {
-        let categories = [
-            { id: "1", name: "name 1", key: "key 1", description: "description 1", avatar: "img.jpg" },
-            { id: "2", name: "name 2", key: "key 2", description: "description 2", avatar: "img.jpg" },
-            { id: "3", name: "name 3", key: "key 3", description: "description 3", avatar: "img.jpg" }
-        ];
-        return categories;
+    private http: Http;
+    constructor(http: Http) {
+        this.http = http;
+    }
+    public getCategories(): Observable<any> {
+        return this.http.get("/api/categories.json").map(this.handleData);
+    }
+
+    private handleData(response: Response): any {
+        return response.json();
     }
 }

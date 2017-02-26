@@ -9,10 +9,18 @@ import { CategoryService } from "./categoryService";
 export class Categories {
     private router: Router;
     public categories: Array<any> = null;
-    public selectedCategory: any ;
+    public selectedCategory: any;
     constructor(router: Router, categoryService: CategoryService) {
         this.router = router;
-        this.categories = categoryService.getCategories();
+        // this.categories = categoryService.getCategories();
+        let self: Categories = this;
+        // categoryService.getCategories().then(function (categories: Array<any>) {
+        //     self.categories = categories;
+        // });
+
+        categoryService.getCategories().subscribe((categories: Array<any>) => {
+            self.categories = categories;
+        })
     }
 
     public onEditCategoryCliked(id: string) {
