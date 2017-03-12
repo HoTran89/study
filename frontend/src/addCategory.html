@@ -1,0 +1,14 @@
+<page>
+    <page-header>
+        <h2>Add category</h2>
+    </page-header>
+    <page-content>
+        <horizal-form>
+            <form-input [label]="'Name'" [value]="model.name"></form-input>
+            <form-input [label]="'Key'" [value]="model.key"></form-input>
+            <form-input [label]="'Description'" [value]="model.description"></form-input>
+            <form-button [label]="'Cancel'" (click)="onCancelClicked()"> </form-button>
+            <form-primary-button [label]="'Save'" (click)="onSaveClicked($event)"></form-primary-button>
+        </horizal-form>
+    </page-content>
+</page>

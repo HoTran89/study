@@ -14,12 +14,18 @@ import { BackgroundColor } from "./backgroundColor";
 import { CategoryKey } from "./categoryKey";
 import { FormInput } from "./formInput";
 import { Page } from "./page";
+import { HttpConnector } from "./httpConnector";
+import { HorizalForm } from "./horizalForm";
+import { FormButton } from "./formButton";
+import { FormPrimaryButton } from "./formPrimaryButton";
 
 @NgModule({
     imports: [BrowserModule, FormsModule, SecurityRoute, HttpModule],
-    declarations: [DefaultPage, Categories, AddCategory, EditCategory, SummaryCategory, CategoryName, BackgroundColor, CategoryKey, FormInput, Page],
+    declarations: [DefaultPage, Categories, AddCategory, EditCategory, SummaryCategory,
+        CategoryName, BackgroundColor, CategoryKey, FormInput, Page, HorizalForm, FormButton, FormPrimaryButton
+    ],
     bootstrap: [DefaultPage],
-    providers: [CategoryService],
+    // providers: [CategoryService, HttpConnector],
     schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
 })
 

@@ -2,3 +2,7 @@ node_modules/
 *.js
 *.js.map
 !src/resources
+backage/
+backend/API/packages/
+backend/API/API/bin/
+backend/API/API/obj/

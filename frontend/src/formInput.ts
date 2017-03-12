@@ -7,7 +7,7 @@ import { Input, Component, Output, EventEmitter } from "@angular/core";
 
 export class FormInput {
     @Input() label: string;
-    @Input() value: string;
+    @Input() value: any;
     @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
 
     public onValueChange() {
