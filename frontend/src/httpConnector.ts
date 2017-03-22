@@ -4,7 +4,7 @@ import { Http, Response } from "@angular/http";
 import { IConnector } from "./iconnector";
 
 // @Injectable()
-export class HttpConnector {
+export class HttpConnector implements IConnector {
     private http: Http;
     // constructor(http: Http) {
     //     this.http = http;

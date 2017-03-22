@@ -1,19 +1,16 @@
-import { Http, Response } from "@angular/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs/observable";
-import "rxjs/add/operator/map";
 import { Promise } from "./promise";
 import { IConnector } from "./iconnector";
-import { HttpConnector } from "./httpConnector";
+import { ICategoryService } from "./icategoryService";
+import { IoCName } from "./enum";
 
 // @Injectable()
-export class CategoryService {
+export class CategoryService implements ICategoryService {
     // private iconnnector: IConnector;
     // constructor(iconnector: HttpConnector) {
     //     this.iconnnector = iconnector;
     // }
     public getCategories(): Promise {
-        let iconnector = window.ioc.resolve("iconnector");
+        let iconnector = window.ioc.resolve(IoCName.IConnector);
         return iconnector.get("/api/categories.json");
     }
 }

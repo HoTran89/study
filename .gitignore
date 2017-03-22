@@ -6,3 +6,14 @@ backage/
 backend/API/packages/
 backend/API/API/bin/
 backend/API/API/obj/
+backend/API/Api.Service.Ipml/obj/
+backend/API/Api.Service.Ipml/bin/
+backend/API/Api.Repository.Impl/obj/
+backend/API/Api.Repository.Impl/bin/
+backend/API/Api.Repository/bin/
+backend/API/Api.Repository/obj/
+backend/API/Api.Context/bin/
+backend/API/Api.Context/obj/
+backend/API/Api.common/obj/
+backend/API/Api.Service/obj/
+backend/API/Api.Service/bin/
