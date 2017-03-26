@@ -11,6 +11,6 @@ export class CategoryService implements ICategoryService {
     // }
     public getCategories(): Promise {
         let iconnector = window.ioc.resolve(IoCName.IConnector);
-        return iconnector.get("/api/categories.json");
+        return iconnector.get("http://localhost:59441/api/categories");
     }
 }
