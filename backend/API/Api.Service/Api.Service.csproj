@@ -46,6 +46,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Api.common\Api.common.csproj">
+      <Project>{a058cdb4-1482-49c5-8b44-7d5761d527b9}</Project>
+      <Name>Api.common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Api.Context\Api.Context.csproj">
       <Project>{0a9e4d50-497b-44e8-b1dd-7e24dc4786dc}</Project>
       <Name>Api.Context</Name>

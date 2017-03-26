@@ -1,4 +1,5 @@
 ﻿using Api.common;
+using Api.common.Attributes;
 using Api.common.Exception;
 using Api.Context;
 using Api.Service;
@@ -38,23 +39,15 @@ namespace API.Controllers
             return responeData;
         }
 
-
         [Route("login")]
         [HttpPost]
-        public IResponeData<LoginResponse> Login(LoginRequest request)
+        [ResponseWapper]
+        public LoginResponse Login(LoginRequest request)
         {
-            IResponeData<LoginResponse> response = new ResponeData<LoginResponse>();
-            try
-            {
-                ICategoryService categoryService = new CategoryService();
-                LoginResponse loginResponse = categoryService.Login(request);
-                response.SetData(loginResponse);
-            }
-            catch (ValidationException ex)
-            {
-                response.AddErrors(ex.Errors);
-            }
-            return response;
+            ICategoryService categoryService = new CategoryService();
+            LoginResponse loginResponse = categoryService.Login(request);
+
+            return loginResponse;
         }
 
         [Route("")]
