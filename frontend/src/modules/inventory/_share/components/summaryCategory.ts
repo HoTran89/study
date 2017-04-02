@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
     selector: "summary-category",
-    templateUrl: "src/summaryCategory.html"
+    templateUrl: "src/modules/inventory/_share/components/summaryCategory.html"
 })
 
 export class SummaryCategory {

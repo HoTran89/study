@@ -1,6 +1,5 @@
 import { IoCFactory } from "./iocFactory";
-import { Promise, PromiseFactory } from "./promise";
-import appConfig from "./appConfig";
+import { Promise, PromiseFactory } from "../models/promise";
 
 let iocHelper = {
     configIoC: configIoC
@@ -8,7 +7,7 @@ let iocHelper = {
 
 export default iocHelper;
 
-function configIoC(): Promise {
+function configIoC(appConfig: any): Promise {
     let def = PromiseFactory.create();
     window.ioc = IoCFactory.create();
     window.ioc.import(appConfig.ioc);

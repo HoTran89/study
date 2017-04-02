@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-    templateUrl: "src/editCategory.html"
+    templateUrl: "src/modules/inventory/category/editCategory.html"
 })
 
 export class EditCategory {

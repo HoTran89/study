@@ -1,7 +1,6 @@
-import { Promise } from "./promise";
-import { IConnector } from "./iconnector";
+import { Promise, IConnector } from "../../../common/index";
 import { ICategoryService } from "./icategoryService";
-import { IoCName } from "./enum";
+import { IoCName } from "../../../common/ioc/enum";
 
 // @Injectable()
 export class CategoryService implements ICategoryService {
@@ -11,6 +10,6 @@ export class CategoryService implements ICategoryService {
     // }
     public getCategories(): Promise {
         let iconnector = window.ioc.resolve(IoCName.IConnector);
-        return iconnector.get("http://localhost:59441/api/categories");
+        return iconnector.get("/categories");
     }
 }

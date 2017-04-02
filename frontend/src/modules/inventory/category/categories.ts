@@ -1,11 +1,10 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-import { ICategoryService } from "./icategoryService";
-import { BasePage } from "./basePage";
-import { IoCName } from "./enum";
+import { ICategoryService } from "../_share/services/icategoryService";
+import { IoCName, BasePage } from "./../../common/index";
 
 @Component({
-    templateUrl: "src/categories.html"
+    templateUrl: "src/modules/inventory/category/categories.html"
 })
 
 export class Categories extends BasePage {

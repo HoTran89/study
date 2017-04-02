@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
     selector: "form-primary-button",
-    templateUrl: "src/formPrimaryButton.html"
+    templateUrl: "src/modules/common/components/formPrimaryButton.html"
 })
 
 export class FormPrimaryButton {
