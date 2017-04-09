@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { AddNewCategoryModel } from "./addNewCategoryModel";
-import { BasePage } from "./../../common/index";
+import { BasePage } from "@app/common";
 import { Router } from "@angular/router";
 
 @Component({

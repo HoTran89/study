@@ -1,0 +1,9 @@
+{
+    "category": {
+        "name": "name",
+        "key": "key",
+        "description": "description",
+        "photo": "photo",
+        "action": "action"
+    }
+}

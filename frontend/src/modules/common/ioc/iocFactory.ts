@@ -26,18 +26,6 @@ export class IocContainer {
         let declaration = this.registration.firstOrDefault((item: any) => { return item.name == obj; });
         let objecBuilder: IObjectBuilder = this.getObjectBuilder(declaration);
         return objecBuilder.build();
-
-        // if (declaration.lifeCycle == IoCLifeCycle.Transient) {
-        //     return new declaration.instance();
-        // }
-
-        // if (declaration.lifeCycle == IoCLifeCycle.Singleton) {
-        //     let instanceFn = !declaration.instanceFn ? new declaration.instance() : declaration.instanceFn;
-        //     declaration.instanceFn = instanceFn;
-        //     return declaration.instanceFn;
-        // }
-
-        // return new declaration.instance();
     }
 
     private resolveAngularObject(object: any) {

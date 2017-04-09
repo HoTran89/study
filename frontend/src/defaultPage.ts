@@ -1,5 +1,5 @@
 import { Component, ApplicationRef } from "@angular/core";
-import helperFacade from "./modules/common/index";
+import helperFacade from "@app/common";
 import appConfig from "./config/appConfig";
 
 @Component({

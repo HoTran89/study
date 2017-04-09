@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es6",
     "module": "system",
     "sourceMap": true,
@@ -8,7 +9,12 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "paths": {
+      "@app/common": [
+        "src/modules/common/index"
+      ]
+    }
   },
   "exclude": [
     "node_modules",

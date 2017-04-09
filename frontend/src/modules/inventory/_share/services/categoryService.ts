@@ -1,4 +1,4 @@
-import { Promise, IConnector } from "../../../common/index";
+import { Promise, IConnector } from "@app/common";
 import { ICategoryService } from "./icategoryService";
 import { IoCName } from "../../../common/ioc/enum";
 

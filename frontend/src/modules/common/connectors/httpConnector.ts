@@ -19,12 +19,6 @@ export class HttpConnector implements IConnector {
         let http: Http = window.ioc.resolve(Http);
         // let http: Http = appHelper.injector.get(Http);
         let def = PromiseFactory.create();
-        // def.resolve([
-        //     {
-        //         "id": "1", "name": "name 1", "key": "key 1", "description": "description 1", "avatar": "img.jpg"
-        //     }
-        // ])
-        // return def;
         http.get(url).map(this.handleData).subscribe(
             (data: any) => def.resolve(data),
             (error: any) => def.reject("reject")

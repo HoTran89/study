@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { ICategoryService } from "../_share/services/icategoryService";
-import { IoCName, BasePage } from "./../../common/index";
+import { IoCName, BasePage } from "@app/common";
 
 @Component({
     templateUrl: "src/modules/inventory/category/categories.html"

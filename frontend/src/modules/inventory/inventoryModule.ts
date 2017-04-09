@@ -12,8 +12,8 @@ import { CategoryName } from "./_share/components/categoryName";
 import { BackgroundColor } from "./_share/components/backgroundColor";
 import { CategoryKey } from "./_share/components/categoryKey";
 import { CommonModule } from "../common/CommonModule";
-import { HttpConnector } from "../common/index";
-import heplerFacade from "../common/index";
+import { HttpConnector } from "@app/common";
+import heplerFacade from "@app/common";
 
 @NgModule({
     imports: [BrowserModule, InventoryRoute, HttpModule, CommonModule],
