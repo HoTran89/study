@@ -12,6 +12,6 @@ import { FormPrimaryButton } from "../common/components/formPrimaryButton";
     exports: [Page, FormButton, FormInput, FormPrimaryButton, HorizalForm],
 })
 
-export class CommonModule {
+export class AppCommonModule {
 
 }

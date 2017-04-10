@@ -8,9 +8,6 @@ namespace API
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
-
-
-
             var formatters = GlobalConfiguration.Configuration.Formatters;
             var jsonFormatter = formatters.JsonFormatter;
             var settings = jsonFormatter.SerializerSettings;

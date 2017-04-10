@@ -6,7 +6,7 @@ namespace Api.Context
     {
         public DbContext() : base("Default")
         {
-
+            Database.SetInitializer<DbContext>(new DropCreateDatabaseIfModelChanges<DbContext>());
         }
         public DbSet<Category> Categories { get; set; }
     }

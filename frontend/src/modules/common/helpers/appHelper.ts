@@ -18,4 +18,5 @@ export interface IInjector {
 
 export interface IAppConfig {
     baseUrl: string;
+    locale: string;
 }

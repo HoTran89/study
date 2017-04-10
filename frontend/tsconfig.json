@@ -13,6 +13,9 @@
     "paths": {
       "@app/common": [
         "src/modules/common/index"
+      ],
+      "@app/themes/default": [
+        "src/themes/gentelella/defaultLayout"
       ]
     }
   },
