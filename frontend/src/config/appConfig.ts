@@ -7,10 +7,7 @@ let appConfig = {
     locales: "",
     modules: ["inventory"],
     baseUrl: "http://localhost:59441/api",
-    ioc: [
-        { name: IoCName.ICategoryService, instance: CategoryService, lifeCycle: IoCLifeCycle.Singleton },
-        { name: IoCName.IConnector, instance: HttpConnector, lifeCycle: IoCLifeCycle.Transient }
-    ],
+    ioc: [],
     layout: DefaultLayout
 }
 export default appConfig;

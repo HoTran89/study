@@ -19,6 +19,15 @@ export class IocContainer {
     public import(registration: Array<any>) {
         this.registration = registration;
     }
+    public registers(registrations: Array<any>) {
+        if (!registrations || registrations.length <= 0) {
+            return;
+        }
+        let self: IocContainer = this;
+        registrations.forEach((item: any) => {
+            self.registration.push(item);
+        })
+    }
     public resolve(obj: any): any {
         if (typeof obj === "function") {
             return this.resolveAngularObject(obj);

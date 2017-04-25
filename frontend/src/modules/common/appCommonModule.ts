@@ -5,6 +5,8 @@ import { FormButton } from "../common/components/formButton";
 import { FormInput } from "../common/components/formInput";
 import { HorizalForm } from "../common/components/horizalForm";
 import { FormPrimaryButton } from "../common/components/formPrimaryButton";
+import { IoCName, IoCLifeCycle } from "./ioc/enum";
+import { HttpConnector } from "./connectors/httpConnector";
 
 @NgModule({
     imports: [FormsModule],
@@ -13,5 +15,7 @@ import { FormPrimaryButton } from "../common/components/formPrimaryButton";
 })
 
 export class AppCommonModule {
-
+    constructor() {
+        window.ioc.registers([{ name: IoCName.IConnector, instance: HttpConnector, lifeCycle: IoCLifeCycle.Transient }]);
+    }
 }

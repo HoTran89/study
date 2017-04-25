@@ -1,6 +1,7 @@
 ﻿using Api.common;
 using Api.common.Attributes;
 using Api.common.Exception;
+using Api.common.IoC;
 using Api.Context;
 using Api.Service;
 using Api.Service.Impl;
@@ -28,7 +29,8 @@ namespace API.Controllers
             IResponeData<IList<Category>> responeData = new ResponeData<IList<Category>>();
             try
             {
-                ICategoryService categoryService = new CategoryService();
+                //ICategoryService categoryService = new CategoryService();
+                ICategoryService categoryService = IoCContainer.Resolve<ICategoryService>();
                 var categories = categoryService.GetCategories();
                 responeData.SetData(categories);
             }

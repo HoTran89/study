@@ -49,10 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrap.cs" />
     <Compile Include="CategoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Api.common\Api.common.csproj">
+      <Project>{A058CDB4-1482-49C5-8B44-7D5761D527B9}</Project>
+      <Name>Api.common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Api.Context\Api.Context.csproj">
       <Project>{0a9e4d50-497b-44e8-b1dd-7e24dc4786dc}</Project>
       <Name>Api.Context</Name>

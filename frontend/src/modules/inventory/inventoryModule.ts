@@ -12,7 +12,7 @@ import { CategoryName } from "./_share/components/categoryName";
 import { BackgroundColor } from "./_share/components/backgroundColor";
 import { CategoryKey } from "./_share/components/categoryKey";
 import { AppCommonModule } from "@app/common";
-import { HttpConnector } from "@app/common";
+import { HttpConnector, IoCName, IoCLifeCycle } from "@app/common";
 import appConfig from "../../config/appConfig";
 import helperFacade from "@app/common";
 
@@ -26,9 +26,7 @@ import helperFacade from "@app/common";
 })
 
 export class InventoryModule {
-    // constructor(app: ApplicationRef) {
-    //     let injector = app["_injector"];
-    //     helperFacade.appHelper.setInjector(injector);
-    //     helperFacade.appHelper.setConfig(appConfig);
-    // }
+    constructor() {
+        window.ioc.registers([{ name: IoCName.ICategoryService, instance: CategoryService, lifeCycle: IoCLifeCycle.Singleton }]);
+    }
 }

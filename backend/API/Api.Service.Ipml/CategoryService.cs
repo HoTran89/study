@@ -3,6 +3,7 @@ using Api.Repository;
 using Api.Repository.Impl;
 using System.Collections.Generic;
 using Api.common.Exception;
+using Api.common.IoC;
 
 namespace Api.Service.Impl
 {
@@ -11,7 +12,8 @@ namespace Api.Service.Impl
         public void CreateCategory(Category category)
         {
             ValidationCreateRquest(category);
-            ICategoryRepository categoryRepository = new CategoryRepository();
+            //ICategoryRepository categoryRepository = new CategoryRepository();
+            ICategoryRepository categoryRepository = IoCContainer.Resolve<ICategoryRepository>();
             categoryRepository.Create(category);
         }
 
@@ -31,13 +33,14 @@ namespace Api.Service.Impl
 
         public IList<Category> GetCategories()
         {
-            ICategoryRepository categoryRepository = new CategoryRepository();
+            //ICategoryRepository categoryRepository = new CategoryRepository();
+            ICategoryRepository categoryRepository = IoCContainer.Resolve<ICategoryRepository>();
             return categoryRepository.GetCategories();
         }
 
         public LoginResponse Login(LoginRequest request)
         {
-            ICategoryRepository categoryRepository = new CategoryRepository();
+            ICategoryRepository categoryRepository = IoCContainer.Resolve<ICategoryRepository>();
             Category category = categoryRepository.getCategoryByName(request.Name);
             if (category != null)
             {
