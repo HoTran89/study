@@ -1,6 +1,5 @@
 declare interface Window {
     ioc: any;
-    $: any;
 }
 
 declare interface Array<T> {
